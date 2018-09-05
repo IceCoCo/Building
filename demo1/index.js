@@ -5,6 +5,7 @@ var parametersBuilding = {
     roomWidth: null,
     elevation: 0, // 楼房一楼的海拔
 }
+//////
 window.addEventListener('DOMContentLoaded', () =>{
   //创建渲染器
   const renderer = new THREE.WebGLRenderer({antialias: true})
