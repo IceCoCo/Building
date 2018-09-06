@@ -11,9 +11,15 @@
     }
 </style>
 <body>
-    <button onclick="close()">关闭转换 开始绘图</button>
+    <!--<button onclick="close()">关闭转换 开始绘图</button>-->
     <div id="app">
-
+        <!--<div *ngIf="token['uid']  > 0">-->
+            <!--<img src="assets/pic/head.png" (click)="merge()" *ngIf="token['avatar'] == ''">-->
+            <!--<img src="assets/pic/head.png" (click)="merge()" *ngIf="token['avatar'] != ''">-->
+        <!--</div>-->
+        <!--<div *ngIf="token['uid']  <= 0">-->
+            <!--<img src="assets/pic/head.png" (click)="merge()">-->
+        <!--</div>-->
     </div>
     <script src="./js/vue.min.js"></script>
     <script src="./js/three.min.js"></script>
@@ -30,7 +36,7 @@
                         buildingX:500,
                         buildingY:100,
                         buildingZ:500,
-                        pliesTotal:11,
+                        pliesTotal:6,
                         rendererBackground:0xffffff,
                         buildingColor: 0x0066ff,
                         groundColor: 0x00ff66,
