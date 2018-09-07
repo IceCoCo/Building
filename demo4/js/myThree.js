@@ -10,8 +10,8 @@ var myThree = function (el, option, meshList) {
     // 鼠标二维坐标投射光线 判断是否实物
     var raycaster = new THREE.Raycaster();
     var mouse = new THREE.Vector2();
-    var objLoader = new THREE.OBJLoader();
-    var mtlLoader = new THREE.MTLLoader();
+
+
     // 获取容器的dom
     var el = document.getElementById(el)
     // 楼房的长宽高
@@ -75,11 +75,17 @@ var myThree = function (el, option, meshList) {
     ground.position.set(0,  - buildingY/2, 0)
     // 往场景中添加地面
     scene.add(ground)
-
-    mtlLoader.load('./mtl/conditioner.mtl', function(mtl){
+    var mtlLoader = new THREE.MTLLoader();
+    mtlLoader.setPath('./mtl/');
+    mtlLoader.load('conditioner.mtl', function(mtl){
+        mtl.preload()
+        console.log(mtl)
+        var objLoader = new THREE.OBJLoader();
         objLoader.setMaterials(mtl)
-        objLoader.load('./obj/conditioner.obj', function(obj) {
+        objLoader.setPath('./obj/');
+        objLoader.load('conditioner.obj', function(obj) {
             // mesh = obj; //储存到全局变量中
+            console.log(obj)
             scene.add(obj);
         });
     })
@@ -177,10 +183,9 @@ var myThree = function (el, option, meshList) {
         var wall002Material = new THREE.MeshLambertMaterial(
             {
                 color: wallColor,
-                transparent : true, //是否使用透明
+                transparent : true, // 是否使用透明
                 opacity :0.5, // 如果模型的transparent设置为true时，模型的透明度（0~1）
                 wireframe: false //是否渲染线而非面
-
             });
         const wall002 = new THREE.Mesh(wall001Geometry, wall001Material)
         wall002.position.set(0, wallHeight/2, -50)
