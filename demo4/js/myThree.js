@@ -10,6 +10,8 @@ var myThree = function (el, option, meshList) {
     // 鼠标二维坐标投射光线 判断是否实物
     var raycaster = new THREE.Raycaster();
     var mouse = new THREE.Vector2();
+    var objLoader = new THREE.OBJLoader();
+    var mtlLoader = new THREE.MTLLoader();
     // 获取容器的dom
     var el = document.getElementById(el)
     // 楼房的长宽高
@@ -73,6 +75,15 @@ var myThree = function (el, option, meshList) {
     ground.position.set(0,  - buildingY/2, 0)
     // 往场景中添加地面
     scene.add(ground)
+
+    mtlLoader.load('./mtl/conditioner.mtl', function(mtl){
+        objLoader.setMaterials(mtl)
+        objLoader.load('./obj/conditioner.obj', function(obj) {
+            // mesh = obj; //储存到全局变量中
+            scene.add(obj);
+        });
+    })
+
     // 添加楼层的方法
     function addRoom (n) {
         const roomGeometry = new THREE.BoxGeometry(buildingX,buildingY,buildingZ)
@@ -102,19 +113,8 @@ var myThree = function (el, option, meshList) {
         // scene.add( particle );
     }
     // 创建楼房（楼房由多个楼层组成）
-    for (var i = 0;i < pliesTotal; i++) {
-        addRoom(i)
-    }
-    // function onDocumentMousemove (e) {
-    //     e.preventDefault()
-    //     mouse.x = (e.clientX / el.offsetWidth) * 2 - 1;
-    //     mouse.y = -(e.clientY / el.offsetHeight) * 2 + 1;
-    //     var vector = new THREE.Vector3(mouse.x, mouse.y,0.5).unproject(camera);
-    //     var raycaster = new THREE.Raycaster(camera.position, vector.sub(camera.position).normalize());
-    //     var intersects = raycaster.intersectObjects(scene.children);
-    //     if (intersects.length > 0 && intersects[0].point.y > - buildingY/2 + 1) {
-    //         intersects[0].object.material.color.set( 0xff0000 );
-    //     }
+    // for (var i = 0;i < pliesTotal; i++) {
+    //     addRoom(i)
     // }
     // 点击事件
     function onDocumentClick (e) {

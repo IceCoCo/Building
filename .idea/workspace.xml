@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e49c26fe-be94-4e75-b61b-9e678775bdb7" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/demo4/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/demo4/js/MTLLoader.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/demo4/js/OBJLoader.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/demo4/mtl/conditioner.mtl" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/demo4/obj/conditioner.obj" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/demo2/index.html" afterPath="$PROJECT_DIR$/demo2/index.html" />
-      <change beforePath="$PROJECT_DIR$/demo3/js/CanvasRenderer.js" afterPath="$PROJECT_DIR$/demo4/js/CanvasRenderer.js" />
-      <change beforePath="$PROJECT_DIR$/demo3/js/OrbitControls.js" afterPath="$PROJECT_DIR$/demo4/js/OrbitControls.js" />
-      <change beforePath="$PROJECT_DIR$/demo3/js/common.js" afterPath="$PROJECT_DIR$/demo4/js/common.js" />
-      <change beforePath="$PROJECT_DIR$/demo3/js/eventsThree.js" afterPath="$PROJECT_DIR$/demo4/js/eventsThree.js" />
-      <change beforePath="$PROJECT_DIR$/demo3/js/myThree.js" afterPath="$PROJECT_DIR$/demo4/js/myThree.js" />
-      <change beforePath="$PROJECT_DIR$/demo3/js/three.min.js" afterPath="$PROJECT_DIR$/demo4/js/three.min.js" />
-      <change beforePath="$PROJECT_DIR$/demo3/js/vue.min.js" afterPath="$PROJECT_DIR$/demo4/js/vue.min.js" />
+      <change beforePath="$PROJECT_DIR$/demo4/index.html" afterPath="$PROJECT_DIR$/demo4/index.html" />
+      <change beforePath="$PROJECT_DIR$/demo4/js/myThree.js" afterPath="$PROJECT_DIR$/demo4/js/myThree.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,44 +22,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo2/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="664">
-              <caret line="43" column="16" lean-forward="true" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+            <state relative-caret-position="550">
+              <caret line="37" column="52" lean-forward="true" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo3/js/common.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CanvasRenderer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo3/js/CanvasRenderer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myThree.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="myThree.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demo4/js/myThree.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="568">
-              <caret line="176" column="60" lean-forward="true" selection-start-line="176" selection-start-column="60" selection-end-line="176" selection-end-column="60" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="591">
+              <caret line="89" column="60" lean-forward="true" selection-start-line="89" selection-start-column="60" selection-end-line="89" selection-end-column="60" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -71,8 +46,20 @@
         <entry file="file://$PROJECT_DIR$/demo3/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="703">
-              <caret line="37" column="21" lean-forward="false" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+              <caret line="37" column="28" lean-forward="false" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myThree.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo3/js/myThree.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2719">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,28 +89,38 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo4/index.html">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="520">
+              <caret line="37" column="34" lean-forward="false" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MTLLoader.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo4/js/MTLLoader.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1166">
+              <caret line="440" column="67" lean-forward="false" selection-start-line="440" selection-start-column="67" selection-end-line="440" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OBJLoader.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo4/js/OBJLoader.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7106">
+              <caret line="374" column="30" lean-forward="false" selection-start-line="374" selection-start-column="24" selection-end-line="374" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conditioner.obj" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo4/obj/conditioner.obj">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo1/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3137">
-              <caret line="129" column="26" lean-forward="true" selection-start-line="87" selection-start-column="10" selection-end-line="129" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index_001.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo1/index_001.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="11" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -135,12 +132,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>parametersBuilding</find>
+      <find>MTLLoader</find>
+      <find>loader</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -152,6 +152,10 @@
         <option value="$PROJECT_DIR$/demo2/js/myThree.js" />
         <option value="$PROJECT_DIR$/demo3/index.html" />
         <option value="$PROJECT_DIR$/demo2/index.html" />
+        <option value="$PROJECT_DIR$/demo4/js/OBJLoader.js" />
+        <option value="$PROJECT_DIR$/demo4/js/myThree.js" />
+        <option value="$PROJECT_DIR$/demo4/js/MTLLoader.js" />
+        <option value="$PROJECT_DIR$/demo4/index.html" />
       </list>
     </option>
   </component>
@@ -162,10 +166,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="440" />
-    <option name="y" value="88" />
+    <option name="x" value="214" />
+    <option name="y" value="86" />
     <option name="width" value="1899" />
-    <option name="height" value="1301" />
+    <option name="height" value="1367" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -229,6 +233,18 @@
               <item name="demo4" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Building" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Building" type="462c0819:PsiDirectoryNode" />
+              <item name="demo4" type="462c0819:PsiDirectoryNode" />
+              <item name="mtl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Building" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Building" type="462c0819:PsiDirectoryNode" />
+              <item name="demo4" type="462c0819:PsiDirectoryNode" />
+              <item name="obj" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -245,6 +261,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\study\github\Building\demo4\mlt" />
+      <recent name="D:\study\github\Building\demo4\obj" />
       <recent name="D:\study\github\Building\demo4" />
       <recent name="D:\study\github\Building\demo3" />
     </key>
@@ -280,15 +298,15 @@
       <option name="presentableId" value="Default" />
       <updated>1536132830743</updated>
       <workItem from="1536132832350" duration="5779000" />
-      <workItem from="1536195607923" duration="9045000" />
+      <workItem from="1536195607923" duration="13564000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14824000" />
+    <option name="totallyTimeSpent" value="19343000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="440" y="88" width="1899" height="1301" extended-state="0" />
+    <frame x="214" y="86" width="1899" height="1367" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12055231" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -334,7 +352,7 @@
         <state relative-caret-position="665">
           <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -372,24 +390,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitattributes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo4/js/myThree.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="176" column="60" lean-forward="true" selection-start-line="176" selection-start-column="60" selection-end-line="176" selection-end-column="60" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo4/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -439,14 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo3/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="37" column="21" lean-forward="false" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo2/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -457,8 +449,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo2/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="43" column="16" lean-forward="true" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+        <state relative-caret-position="550">
+          <caret line="37" column="52" lean-forward="true" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo3/js/myThree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2719">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo3/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="37" column="28" lean-forward="false" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo4/obj/conditioner.obj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo4/js/OBJLoader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7106">
+          <caret line="374" column="30" lean-forward="false" selection-start-line="374" selection-start-column="24" selection-end-line="374" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo4/js/MTLLoader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1166">
+          <caret line="440" column="67" lean-forward="false" selection-start-line="440" selection-start-column="67" selection-end-line="440" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo4/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="37" column="34" lean-forward="false" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo4/js/myThree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="89" column="60" lean-forward="true" selection-start-line="89" selection-start-column="60" selection-end-line="89" selection-end-column="60" />
           <folding />
         </state>
       </provider>
