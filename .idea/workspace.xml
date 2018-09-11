@@ -2,74 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e49c26fe-be94-4e75-b61b-9e678775bdb7" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/demo6/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/demo6/js/TrackballControls.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/demo6/js/data.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/demo6/js/js.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/demo6/js/three.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/electricMeterDEMO/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/electricMeterDEMO/js/CanvasRenderer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/electricMeterDEMO/js/OrbitControls.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/electricMeterDEMO/js/msj3D.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/electricMeterDEMO/js/myRoom.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/electricMeterDEMO/js/myThree.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/electricMeterDEMO/js/three.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/electricMeterDEMO/js/vue.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/air.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/aircondition.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/alarm.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/bbb.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/camera.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/connection.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/doorControl.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/door_left.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/door_right.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/down.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/edit.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/eee.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/fire_extinguisher_side.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/floor.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/flow.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/fps.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/glass.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/inside_lightmap.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/message.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/metal.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/outside_lightmap (1).jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/outside_lightmap.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/plant.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/power.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/rack.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/rack_door_back.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/rack_front_door.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/rack_inside.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/rack_inside_normal.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/rail.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/reset.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/room.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/security.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/server2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/server3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/smoke.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/smoking.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/space.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/temperature.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/tv.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/usage.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/images/water.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/js/data.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/js/msj3D.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/lib/CanvasRenderer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/lib/ThreeBSP.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/lib/controls/OrbitControls.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/lib/stats.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/lib/three.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/lib/tweenjs.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/demo4/js/myThree.js" afterPath="$PROJECT_DIR$/demo4/js/myThree.js" />
-      <change beforePath="$PROJECT_DIR$/demo4/js/three.min.js" afterPath="$PROJECT_DIR$/demo4/js/three.min.js" />
+      <change beforePath="$PROJECT_DIR$/test/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/index.html" afterPath="$PROJECT_DIR$/test/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -88,8 +22,8 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="665">
-                  <caret line="35" column="49" lean-forward="false" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
+                <state relative-caret-position="570">
+                  <caret line="30" column="50" lean-forward="false" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
                   <folding />
                 </state>
               </provider>
@@ -196,16 +130,6 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="CanvasRenderer.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/test/lib/CanvasRenderer.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -296,6 +220,7 @@
         <option value="$PROJECT_DIR$/ThreeJsTest-master/js/data.js" />
         <option value="$PROJECT_DIR$/ThreeJsTest-master/index.html" />
         <option value="$PROJECT_DIR$/ThreeJsTest-master/js/msj3D.js" />
+        <option value="$PROJECT_DIR$/test/index.html" />
       </list>
     </option>
   </component>
@@ -334,6 +259,11 @@
             <path>
               <item name="Building" type="b2602c69:ProjectViewProjectNode" />
               <item name="Building" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Building" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Building" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -392,17 +322,18 @@
       <updated>1536132830743</updated>
       <workItem from="1536132832350" duration="5779000" />
       <workItem from="1536195607923" duration="39703000" />
-      <workItem from="1536629820648" duration="111000" />
+      <workItem from="1536629820648" duration="285000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45593000" />
+    <option name="totallyTimeSpent" value="45767000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="430" y="34" width="1899" height="1367" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18852894" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18852894" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -432,13 +363,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/demo5/mtl/butterfly.mtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo4/mtl/conditioner.mtl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -780,10 +704,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="35" column="49" lean-forward="false" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
+        <state relative-caret-position="570">
+          <caret line="30" column="50" lean-forward="false" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
           <folding />
         </state>
       </provider>
