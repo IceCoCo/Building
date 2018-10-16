@@ -182,6 +182,9 @@ msj3D.prototype.InitAddObject = function (_obj) {
                 _tempObj = _this.commonFunc.cloneObj(_obj.copyfrom, _obj);
                 _this.addObject(_tempObj);
                 break;
+            case 'smokeAlarm':
+                _tempObj = _this.CreateSmokeAlarm (_this, _obj);
+                break;
         }
     }
 }
@@ -281,26 +284,26 @@ msj3D.prototype.AddWall = function (_this, v) {
     }
     _this.addObject(_cube);
 }
-msj3D.prototype.addObj = function () {
-
-}
-// 修改obj
-msj3D.prototype.upDateWall = function (_this, oldWall, newWall) {
-    console.log(_this.scene.children)
-    _this.deleteWall(_this, oldWall)
-    console.log(_this.scene.children)
-    _this.AddWall(_this, newWall)
-    console.log(_this.scene.children)
-}
-msj3D.prototype.deleteWall = function (_this, obj) {
-    // _this.scene.removeChild(obj)
-    var index = _this.scene.children.length
-    for (var i = 0; i < index; i++) {
-        if (_this.scene.children[i].name === obj.name) {
-            console.log(_this.scene.children[i].name,obj.name)
-            _this.scene.remove(_this.scene.children[i]);
-        }
+msj3D.prototype.CreateSmokeAlarm = function (_this, _obj) {
+    if (_this == null) {
+        _this = this
     }
+    // 烟雾报警器的圆台
+    console.log(_obj)
+    var _x = _obj.x;
+    var _y = _obj.y;
+    var _z = _obj.z;
+    // 创建圆柱体
+    var cylinderGeometry = new THREE.CylinderGeometry(_obj.width/2, _obj.width/4, _obj.height)
+    console.log(cylinderGeometry.faces)
+    var cylinderMaterials = new THREE.MeshFaceMaterial({color: "#9eb8e2"})
+    var cylinder = new THREE.Mesh(cylinderGeometry, cylinderMaterials);
+    cylinder.castShadow = true;
+    cylinder.receiveShadow = true;
+    cylinder.uuid = _obj.uuid;
+    cylinder.name = _obj.name;
+    cylinder.position.set(_x, _y, _z);
+    _this.addObject(cylinder)
 }
 //挖洞
 msj3D.prototype.CreateHole = function (_this, _obj) {
@@ -556,6 +559,57 @@ msj3D.prototype.createPlaneGeometry = function (_this,_obj) {
     plane.rotation.z = options.rotation.z;
     return plane;
 }
+// 创建楼房
+msj3D.prototype.addBuilding = function (_this, _obj) {
+    /* 参数demo
+    {
+        show: true,
+        uuid: '',
+        name: 'building',
+        objType: 'building',
+        length: 2000,
+        width: 3000,
+        plies: 20,          // 层数
+        height: 100,
+        rotation: [{ direction: 'x', degree: 0 }],
+        x: 0,
+        y: 0,
+        z: 0,
+        style: {
+            skinColor: 0x6a7072      // 六个面的默认颜色
+        }
+    } */
+
+    _this = msj3DObj;
+    _obj = {
+        show: true,
+        uuid: '',
+        name: 'building',
+        objType: 'building',
+        length: 2000,
+        width: 3000,
+        plies: 20,          // 层数
+        height: 50,
+        rotation: [{ direction: 'x', degree: 0 }],
+        x: 0,
+        y: 0,
+        z: 0,
+        style: {
+            skinColor: 0x6a7072,
+            skin_up: { imgurl: "../datacenterdemo/res/rack_door_back.jpg" },
+            skin_down: { imgurl: "../datacenterdemo/res/rack_door_back.jpg" },
+            skin_fore: { imgurl: "../datacenterdemo/res/rack_door_back.jpg" },
+            skin_behind: { imgurl: "../datacenterdemo/res/rack_door_back.jpg" },
+            skin_left: { imgurl: "../datacenterdemo/res/rack_door_back.jpg" },
+            skin_right: { imgurl: "../datacenterdemo/res/rack_door_back.jpg" },
+        }
+    }
+    var _length = _obj.length || 1000 //默认1000
+    var _width = _obj.width || _length
+    var _height = _obj.plies * _obj.height || 10
+    var buildingGeometry = new THREE.CubeGeometry(_length, _height, _width, 0, 0, 1)
+
+}
 //创建空柜子
 msj3D.prototype.createEmptyCabinet = function (_this, _obj) {
     /* 参数demo
@@ -583,7 +637,7 @@ msj3D.prototype.createEmptyCabinet = function (_this, _obj) {
     },
     skin:{
             skinColor: 0xdddddd,
-            
+
                 skin:{
                             skinColor: 0xdddddd,
                             skin_up: { imgurl: "../datacenterdemo/res/rack_door_back.jpg" },
@@ -593,7 +647,7 @@ msj3D.prototype.createEmptyCabinet = function (_this, _obj) {
                             skin_left: { imgurl: "../datacenterdemo/res/rack_door_back.jpg" },
                             skin_right: { imgurl: "../datacenterdemo/res/rack_door_back.jpg" },
                 }
-        
+
         }
 }
     */
@@ -835,6 +889,10 @@ msj3D.prototype.commonFunc={
     },
     //复制对象
     cloneObj: function (_objname, newparam) {
+        if (!_objname) {
+            return
+        }
+        console.log()
         /*newparam
         {
         show: true,
@@ -1032,7 +1090,6 @@ msj3D.prototype.onDocumentMouseDown = function (event) {
         }
     }
 }
-
 
 msj3D.prototype.onDocumentMouseMove = function (event) {
     event.preventDefault();
