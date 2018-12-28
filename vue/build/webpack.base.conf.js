@@ -66,6 +66,30 @@ module.exports = {
         }
       },
       {
+        test: /\/src\/assets\/mesh\/.*\/.*\/.*\.png/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: utils.assetsPath('mesh/textures/[name].[ext]')
+        }
+      },
+      {
+        test: /\/src\/assets\/mesh\/.*\/.*\.bin/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: utils.assetsPath('mesh/[name].[ext]')
+        }
+      },
+      {
+        test: /\.(fbx|gltf)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: utils.assetsPath('mesh/[name].[ext]')
+        }
+      },
+      {
         test: /bower_components\/EaselJS\/.*\.js$/,
         loader: 'imports?this=>window!exports?window.createjs'
       },
@@ -84,6 +108,14 @@ module.exports = {
       {
         test: require.resolve("three/examples/js/loaders/FBXLoader"),
         use: "exports-loader?THREE.FBXLoader"
+      },
+      {
+        test: require.resolve("three/examples/js/loaders/GLTFLoader"),
+        use: "imports-loader?THREE=three"
+      },
+      {
+        test: require.resolve("three/examples/js/loaders/GLTFLoader"),
+        use: "exports-loader?THREE.GLTFLoader"
       }
     ]
   },

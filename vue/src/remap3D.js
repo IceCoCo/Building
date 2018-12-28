@@ -2,6 +2,7 @@ import * as THREE from 'three'
 // import OrbitControls from 'three-orbitcontrols'
 import OrbitControls from "three/examples/js/controls/OrbitControls"
 import FBXLoader from "three/examples/js/loaders/FBXLoader"
+import GLTFLoader from "three/examples/js/loaders/GLTFLoader"
 
 var isOne = 0
 var dbclick =0;
@@ -15,7 +16,6 @@ export class remap3D {
     this.msj3D = null
     this.camera = null
     this.isPlan = isPlan
-    console.log(this.isPlan)
     this.p1 = {
       x:0,
       y:0,
@@ -76,12 +76,8 @@ export class remap3D {
     _this.renderer.shadowMap.enabled = true;//
     _this.renderer.shadowMapSoft = true;
     //事件
-    console.log(_this)
-    console.log(_this.onDocumentMouseDown)
-    console.log(_this.onDocumentMouseDown.bind)
     // _this.renderer.domElement.addEventListener('mousedown', _this.onDocumentMouseDown.bind(_this), false);
     _this.renderer.domElement.addEventListener('mousedown', (e) => {
-      console.log(e)
       this.onDocumentMouseDown(e)
     }, false);
     _this.renderer.domElement.addEventListener('mousemove', (e) => {
@@ -142,7 +138,6 @@ export class remap3D {
 
   initMouseCtrl () {
     var _this = this;
-    console.log(_this.camera)
     _this.controls = new OrbitControls(_this.camera, document.getElementById(_this.fId));
     _this.controls.addEventListener('change', (e) => {
       _this.updateControls(e)
@@ -151,7 +146,6 @@ export class remap3D {
 
   updateControls (e) {
     var _this =  this
-    console.log(e)
   }
 
   linkLine () {
@@ -159,9 +153,6 @@ export class remap3D {
     var pX = (_this.p1.x / _this.width) * 2 - 1;
     var pY = - (_this.p1.y / _this.height) * 2 + 1;
     var p = new THREE.Vector3(pX, pY, -1).unproject(_this.camera)
-    console.log(new THREE.Vector3(pX, pY, -1).unproject(_this.camera))
-    console.log(_this.camera)
-    console.log(p)
     var geometry = new THREE.Geometry();
     var material = new THREE.LineBasicMaterial( { color: 0xff0000} );
     geometry.vertices.push(_this.p1)
@@ -186,7 +177,6 @@ export class remap3D {
     if (!isOne) {
       this.linkLine()
       isOne++
-      console.log(isOne)
     }
     _this.mymove()
   }
@@ -249,7 +239,6 @@ export class remap3D {
           break;
         case 'smokeDetector' :
           _tempObjList = _this.addSmokeDetector(_obj);
-          console.log(_tempObjList)
           _tempObjList.forEach((v, i) => {
             _this.addObject(v)
           })
@@ -258,10 +247,38 @@ export class remap3D {
           _tempObj = _this.addGroup(_this, _obj);
           _this.addObject(_tempObj);
           break;
+        case 'gltfObj' :
+          _tempObj = _this.addGltfObj(_obj)
+          console.log(_tempObj)
+          // _this.addObject(_tempObj);
+          break
       }
     }
   }
-
+  addGltfObj (_obj) {
+    console.log(_obj)
+    var _this =  this
+    var GLTFload = new GLTFLoader()
+    var obj
+    GLTFload.setCrossOrigin('Anonymous')
+    GLTFload.load(_obj.url, function (object) {
+      console.log('加载成功')
+      console.log(object)
+      // object.scene.children[0].position.x = 0
+      // object.scene.children[0].position.y = 0
+      // object.scene.children[0].position.z = 0
+      object.scene.children[0].scale.x = 0.05
+      object.scene.children[0].scale.y = 0.05
+      object.scene.children[0].scale.z = 0.05
+      obj = object.scene
+      // console.log(obj)
+      _this.scene.add(obj)
+    }, () => {
+    }, () => {
+    })
+    // console.log(obj)
+    // return obj
+  }
   addSmokeDetector (_obj) {
     var _this =  this
     var FBXload = new FBXLoader()
@@ -278,7 +295,6 @@ export class remap3D {
         objList.push(item)
         // _this.addObject(item)
       })
-      console.log(objList, 111)
     })
     return objList
   }
@@ -286,7 +302,6 @@ export class remap3D {
     //   var FBXloader = new THREE.FBXLoader()
     // FBXloader.load('./obj/yangan_c4d2.fbx', function (object) {
     //   // object.scale.multiplyScalar(.1);    // 缩放模型大小
-    //   console.log(object)
     //   // object.repeat.set(1, 1);
     //   object.scale.multiplyScalar(1);
     //   _this.scene.add(object)
@@ -354,6 +369,9 @@ export class remap3D {
             _tempObj = _this.addGroup(_this, v);
             _this.addObject(_tempObj, 'group', group);
             break;
+          case 'gltfObj' :
+            _tempObjList = _this.addGltfObj(_obj)
+            break
         }
       }
     })
@@ -541,7 +559,6 @@ export class remap3D {
   }
 //创建盒子体
   createCube (_this, _obj) {
-    console.log(_this, _obj)
     if (_this == null) {
       _this = this;
     }
@@ -551,7 +568,6 @@ export class remap3D {
     var _x = _obj.x || 0, _y = _obj.y || 0, _z = _obj.z || 0;
     var skinColor = _obj.style.skinColor || 0x98750f;
     var cubeGeometry = new THREE.CubeGeometry(_length, _height, _width, 0, 0, 1);
-    console.log(cubeGeometry)
     //六面颜色
     for (var i = 0; i < cubeGeometry.faces.length; i += 2) {
       var hex = skinColor || Math.random() * 0x531844;
@@ -573,7 +589,6 @@ export class remap3D {
       //透明度
       if (_obj.style.skin.opacity != null && typeof (_obj.style.skin.opacity) != 'undefined') {
         skin_opacity = _obj.style.skin.opacity;
-        console.log(skin_opacity)
       }
       //上
       skin_up_obj = _this.createSkinOptionOnj(_this, _length, _width, _obj.style.skin.skin_up, cubeGeometry, 4);
@@ -882,12 +897,8 @@ export class remap3D {
     if (_obj.height != null && typeof (_obj.height) != 'undefined') {
       imgheight = _obj.height;
     }
-    console.log(new THREE.TextureLoader)
-    console.log(_obj.imgurl)
     var texture = new THREE.TextureLoader().load(_obj.imgurl, function (e) {
-      console.log(e)
     }, function (e) {
-      console.log(e)
     });
     var _repeat = false;
     if (_obj.repeatx != null && typeof (_obj.repeatx) != 'undefined' && _obj.repeatx==true) {
@@ -1132,8 +1143,6 @@ export class remap3D {
       if (intersects.length > 0) {
         _this.controls.enabled = false;
         _this.SELECTED = intersects[0].object;
-        console.log(intersects[0].object)
-        console.log(intersects[0].object.parent)
         // intersects[0].object.parent.scale.x = intersects[0].object.parent.scale.x + 0.2
         // intersects[0].object.parent.scale.y = intersects[0].object.parent.scale.y + 0.2
         // intersects[0].object.parent.scale.z = intersects[0].object.parent.scale.z + 0.2
