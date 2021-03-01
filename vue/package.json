@@ -17,7 +17,7 @@
     "anywhere": "^1.5.0",
     "echarts": "^3.8.5",
     "latest-createjs": "^1.0.24",
-    "three": "^0.99.0",
+    "three": "^0.125.0",
     "three-orbitcontrols": "^2.99.1",
     "threejs-fbxloader": "^0.0.1",
     "tweenjs": "^1.0.2",
